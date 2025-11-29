@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: my-nginx
+    ports:
+      - "8070:80"
+    restart: unless-stopped
+
+  apache:
+    image: httpd:2.4
+    container_name: my-apache
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
